@@ -22,20 +22,18 @@ namespace ED.Globus.Nom.Mavir.HT
             var fileLogger = new FileLogger();
 
             log.LogDebug("C# HTTP trigger function processed a request1.");
-          
-            var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            log.LogDebug(requestBody);
-            if (string.IsNullOrEmpty(requestBody))
-            {
-                fileLogger.Debug("request was empty when read to end");
-            }
-            else
-            {
-                fileLogger.Debug(requestBody);
-            }
 
+            string requestBodyAsStr = await new StreamReader(req.Body).ReadToEndAsync();
+            log.LogDebug("We got a request from Mavir");
+
+            var str = "INSERT INTO [Bulk].[RawMavirReplies]([Data],[LastUpdatedUtc]) VALUES('{0}', GETUTCDATE())";
+            var insertStatement = string.Format(str, requestBodyAsStr);
+
+            var azureDbHandler = new AzureDbHandler(fileLogger);
+            string sqlConnection = "Server=tcp:tradinganalytics.database.windows.net;Database=7_tradesupporttest;User ID=All_ExceuteWriteLogin;Password=cn5QuJhsePLkPwKyR6zY;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;";
+            azureDbHandler.ExecuteSql(insertStatement, sqlConnection);
             //return new OkObjectResult(requestBody == string.Empty ? "Post request was null" : requestBody);
-            return new OkObjectResult(requestBody);
+            return new OkObjectResult(requestBodyAsStr);
 
         }
     }
