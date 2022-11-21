@@ -52,24 +52,38 @@ namespace ED.Globus.Nom.Mavir.HT
         private static string GetIdentificationFromXml(string ackXml, string identificationKey)
         {
             string result = null;
-            var regexMatch = Regex.Match(ackXml, $"{identificationKey}.*");
-            //var regexMatch = Regex.Match(ackXml, @"DocumentIdentification v=""(\w *)"".*");
-            if (regexMatch.Success)
+            try
             {
-
-                string key = regexMatch.Groups[0].Value;
-                if (!string.IsNullOrEmpty(key))
+                var regexMatch = Regex.Match(ackXml, $"{identificationKey}.*");
+                if (regexMatch.Success)
                 {
-                    var valueRegex = Regex.Match(key, "(\".*\")");
-                    if (valueRegex.Success)
+
+                    string key = regexMatch.Groups[0].Value;
+                    if (!string.IsNullOrEmpty(key))
                     {
-                        result = valueRegex.Groups[0].Value;
-                        result = result.Replace("\"", string.Empty);
+                        var valueRegex = Regex.Match(key, "(\".*\")/>");
+                        if (valueRegex.Success)
+                        {
+
+                            result = valueRegex.Groups[0].Value;
+                            result = result.Replace("\"", string.Empty);
+                            var tempResult = result;
+
+                            var firstIndeOf = tempResult.IndexOf(">");
+                            if (firstIndeOf == -1)
+                            {
+                                return null;
+                            }
+                            result = tempResult.Substring(0, firstIndeOf - 1);
+                        }
                     }
+
                 }
-
             }
-
+            catch(Exception ex)
+            {
+                
+            }
             return result;
         }
     }

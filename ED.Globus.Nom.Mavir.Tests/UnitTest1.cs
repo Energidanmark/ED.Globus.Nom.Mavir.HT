@@ -13,10 +13,11 @@ namespace ED.Globus.Nom.Mavir.Tests
 
             var ackXmlPath = @"./Resources/MavirReceiveAck.xml";
 
-            var ackXml = System.IO.File.ReadAllText(ackXmlPath, System.Text.Encoding.UTF8);
+            string ackXml = System.IO.File.ReadAllText(ackXmlPath, System.Text.Encoding.UTF8);
+            ackXml = ackXml.Replace("\n", "").Replace("\r", "");
 
-            var ackIdentification = GetIdentificationFromXml(ackXml, "DocumentIdentification") ?? 
-                GetIdentificationFromXml(ackXml, "MessageIdentification");
+            var ackIdentification = GetIdentificationFromXml(ackXml, "DocumentIdentification") ??
+                GetIdentificationFromXml(ackXml, "MessageIndentification");
 
             Assert.Equal("ACKID354554", ackIdentification);
 
@@ -34,18 +35,29 @@ namespace ED.Globus.Nom.Mavir.Tests
         {
             string result = null;
             var regexMatch = Regex.Match(ackXml, $"{identificationKey}.*");
-            //var regexMatch = Regex.Match(ackXml, @"DocumentIdentification v=""(\w *)"".*");
             if (regexMatch.Success)
             {
 
                 string key = regexMatch.Groups[0].Value;
                 if (!string.IsNullOrEmpty(key))
                 {
-                    var valueRegex = Regex.Match(key, "(\".*\")");
+                    var valueRegex = Regex.Match(key, "(\".*\")/>");
                     if (valueRegex.Success)
                     {
+
                         result = valueRegex.Groups[0].Value;
                         result = result.Replace("\"", string.Empty);
+                        var tempResult = result;
+                        
+                        var firstIndeOf = tempResult.IndexOf(">");
+                        if(firstIndeOf == -1)
+                        {
+                            return null;
+                        }
+                        result = tempResult.Substring(0, firstIndeOf-1);
+                        
+
+                        
                     }
                 }
 
