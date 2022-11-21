@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Header xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+		<ns0:mekAuth xmlns:ns0="http://www.mavir.hu/OSB/Authentication/">
+			<username>http</username>
+			<password>//edglobusnommavirht20221004082828.azurewebsites.net/api/MekToPartner</password>
+		</ns0:mekAuth>
+	</S:Header>
+	<S:Body xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+		<ns5:receiveAckRequest xmlns:ns5="http://www.mavir.hu/external/brp/NoticeManager/">
+			<ns1:AcknowledgementDocument DtdVersion="5" DtdRelease="0" xmlns:ns1="urn:entsoe.eu:edi:ack:acknowledgement:5:0">
+				<ns1:DocumentIdentification v="ACKID354554"/>
+				<ns1:DocumentDateTime v="2022-11-15T13:12:04Z"/>
+				<ns1:SenderIdentification v="10X1001A1001A329" codingScheme="A01"/>
+				<ns1:SenderRole v="A31"/>
+				<ns1:ReceiverIdentification v="11XDISAM-------V" codingScheme="A01"/>
+				<ns1:ReceiverRole v="A01"/>
+				<ns1:ReceivingDocumentIdentification v="rono1"/>
+				<ns1:ReceivingDocumentVersion v="4"/>
+				<ns1:ReceivingDocumentType v="A01"/>
+				<ns1:DateTimeReceivingDocument v="2022-11-15T13:12:03Z"/>
+				<ns1:Reason>
+					<ns1:ReasonCode v="A01"/>
+					<ns1:ReasonText v="Message fully accepted"/>
+				</ns1:Reason>
+			</ns1:AcknowledgementDocument>
+		</ns5:receiveAckRequest>
+	</S:Body>
+</soapenv:Envelope>

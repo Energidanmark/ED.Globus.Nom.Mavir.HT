@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Header xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+		<ns0:mekAuth xmlns:ns0="http://www.mavir.hu/OSB/Authentication/">
+			<username>http</username>
+			<password>//edglobusnommavirht20221004082828.azurewebsites.net/api/MekToPartner</password>
+		</ns0:mekAuth>
+	</S:Header>
+	<S:Body xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+		<ns5:receiveAnoRequest xmlns:ns5="http://www.mavir.hu/external/brp/NoticeManager/">
+			<ns1:AnomalyReport DtdVersion="3" DtdRelease="3" xmlns:ns1="urn:entsoe.eu:edi:ano:anomalyreport:3:3">
+				<ns1:MessageIdentification v="ANO20221115131504715"/>
+				<ns1:MessageDateTime v="2022-11-15T13:18:02Z"/>
+				<ns1:SenderIdentification v="10X1001A1001A329" codingScheme="A01"/>
+				<ns1:SenderRole v="A31"/>
+				<ns1:ReceiverIdentification v="11XDISAM-------V" codingScheme="A01"/>
+				<ns1:ReceiverRole v="A01"/>
+				<ns1:ScheduleTimeInterval v="2022-11-14T23:00Z/2022-11-15T23:00Z"/>
+				<ns1:TimeSeriesAnomaly>
+					<ns1:MessageSenderIdentification v="11XDISAM-------V" codingScheme="A01"/>
+					<ns1:SendersMessageIdentification v="GEN_SCHEDULE_20221114224744_7576"/>
+					<ns1:SendersMessageVersion v="1"/>
+					<ns1:SendersTimeSeriesIdentification v="IMPOSED_TS_20221114224744_1_9995"/>
+					<ns1:SendersTimeSeriesVersion v="1"/>
+					<ns1:BusinessType v="A02"/>
+					<ns1:Product v="8716867000016"/>
+					<ns1:ObjectAggregation v="A03"/>
+					<ns1:InArea v="10YHU-MAVIR----U" codingScheme="A01"/>
+					<ns1:OutArea v="10YHU-MAVIR----U" codingScheme="A01"/>
+					<ns1:InParty v="15X-HUPX-ID----A" codingScheme="A01"/>
+					<ns1:OutParty v="11XDISAM-------V" codingScheme="A01"/>
+					<ns1:MeasurementUnit v="MAW"/>
+					<ns1:Period>
+						<ns1:TimeInterval v="2022-11-14T23:00Z/2022-11-15T23:00Z"/>
+						<ns1:Resolution v="PT15M"/>
+						<ns1:Interval>
+							<ns1:Pos v="1"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="2"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="3"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="4"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="5"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="6"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="7"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="8"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="9"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="10"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="11"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="12"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="13"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="14"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="15"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="16"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="17"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="18"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="19"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="20"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="21"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="22"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="23"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="24"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="25"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="26"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="27"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="28"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="29"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="30"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="31"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="32"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="33"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="34"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="35"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="36"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="37"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="38"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="39"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="40"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="41"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="42"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="43"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="44"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="45"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="46"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="47"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="48"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="49"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="50"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="51"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="52"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="53"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="54"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="55"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="56"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="57"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="58"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="59"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="60"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="61"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="62"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="63"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="64"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="65"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="66"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="67"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="68"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="69"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="70"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="71"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="72"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="73"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="74"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="75"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="76"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="77"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="78"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="79"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="80"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="81"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="82"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="83"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="84"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="85"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="86"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="87"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="88"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="89"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="90"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="91"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="92"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="93"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="94"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="95"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+						<ns1:Interval>
+							<ns1:Pos v="96"/>
+							<ns1:Qty v="0"/>
+						</ns1:Interval>
+					</ns1:Period>
+					<ns1:Reason>
+						<ns1:ReasonCode v="Z32"/>
+						<ns1:ReasonText v="[Inconsistency with a special counterparty having different priority]"/>
+					</ns1:Reason>
+					<ns1:Reason>
+						<ns1:ReasonCode v="A09"/>
+						<ns1:ReasonText v="[Time series not matching]"/>
+					</ns1:Reason>
+				</ns1:TimeSeriesAnomaly>
+			</ns1:AnomalyReport>
+		</ns5:receiveAnoRequest>
+	</S:Body>
+</soapenv:Envelope>
