@@ -56,6 +56,40 @@ namespace ED.Globus.Nom.Mavir.HT
 
             return didExecute;
         }
+        public bool ExecuteStoredProcedure(string executeStoredProcedure, string connectionString)
+        {
+            bool result = true;
+            DbConnection sqlConnection = null;
+            DbProviderFactories.RegisterFactory("System.Data.SqlClient", SqlClientFactory.Instance);
+            var dbFactory = DbProviderFactories.GetFactory("System.Data.SqlClient");
+
+
+            using (DbConnection conn = dbFactory.CreateConnection())
+            {
+                try
+                {
+                    conn.ConnectionString = connectionString;
+                    conn.Open();
+
+                    // 1.  create a command object identifying the stored procedure
+                    DbCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Connection = conn;
+                    cmd.CommandText =executeStoredProcedure;
+
+                    // execute the command
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    _log?.Debug($"Failed to call import stored procdure '{executeStoredProcedure}' on {connectionString}. Ex: {ex.Message}");
+                    result = false;
+                }
+            }
+
+
+            return result;
+        }
         public bool ExecuteErrorLogStoredProcedure(string message, bool errorOccured, string executeStoredProcedure, string connectionString)
         {
             bool result = true;

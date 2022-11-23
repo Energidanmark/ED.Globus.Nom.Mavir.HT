@@ -45,6 +45,11 @@ namespace ED.Globus.Nom.Mavir.HT
             var azureDbHandler = new AzureDbHandler(fileLogger);
             string sqlConnection = "Server=tcp:tradinganalytics.database.windows.net;Database=7_tradesupporttest;User ID=All_ExceuteWriteLogin;Password=cn5QuJhsePLkPwKyR6zY;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;";
             azureDbHandler.ExecuteSql(insertStatement, sqlConnection);
+
+            azureDbHandler.ExecuteStoredProcedure("[Mavir].[ImportBulkReplyData]", sqlConnection);
+            azureDbHandler.ExecuteStoredProcedure("[Mavir].[CreateRawReply]", sqlConnection);
+
+
             //return new OkObjectResult(requestBody == string.Empty ? "Post request was null" : requestBody);
             return new OkObjectResult(requestBodyAsStr);
 
